@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    輸入a:<input type="text" id="i"><br><br>
-    <button id="btn">計算</button>
-    <h1 id="showup"></h1>
+    <div style="padding: 20px;">
+        HRC &nbsp;&nbsp;<input type="text" id="i"><br><br>
+        <button id="btn" style="margin-left: 60px;padding-left: 30px;padding-right: 30px;">Button</button><br><br>
+        HB &nbsp;&nbsp;<input type="text" readonly="true" id="showup">
+    </div>
+
     <script>
-       
-        let a=document.getElementById('i')
-        const btn1=document.getElementById('btn')
-        const show=document.getElementById('showup')
-        btn1.addEventListener('click',function(){
-            
-            show.textContent=a.value*5.970+104.7
+
+        let a = document.getElementById('i')
+        const btn1 = document.getElementById('btn')
+        const show = document.getElementById('showup')
+        btn1.addEventListener('click', function () {
+            if (a.value !== '')
+                show.value = a.value * 5.970 + 104.7
+
         })
-        
-        
+
+
     </script>
 </body>
+
 </html>
